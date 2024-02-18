@@ -13,7 +13,6 @@ html {
 body {
   background-color: #fffdfa;
   font-family: 'Inter', sans-serif;
-  line-height: 1.5;
   /* display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +25,7 @@ p {
 }
 
 main {
-  max-width: 128rem;
+  max-width: 102.4rem;
   margin: 0 auto;
   padding: 2rem 4rem;
 }
@@ -73,9 +72,10 @@ a:visited {
 }
 
 .navigation_routes_mobile {
+  background-color: #fffdfa;
   position: absolute;
   right: 0;
-  top: 4rem;
+  top: 5rem;
   width: 50%;
   height: 100vh;
   display: flex;
@@ -83,6 +83,84 @@ a:visited {
   align-items: center;
   gap: 2rem;
   padding: 2rem 0;
+}
+
+/* css for hero */
+.hero_grid_box {
+  display: grid;
+  gap: 2rem;
+}
+
+.hero_grid_box .hero_cover_desktop {
+  display: none;
+}
+
+.hero_grid_box .hero_cover_mobile {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero_grid_heading h1 {
+  color: #00001a;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.hero_grid_description p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.hero_grid_description button {
+  color: #fffdfa;
+  font-family: inherit;
+  padding: 1.5rem 4rem;
+  text-transform: uppercase;
+  background-color: #f15e50;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+}
+
+.hero_grid_description button:hover {
+  background-color: #00001a;
+}
+
+.hero_grid_new {
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.hero_grid_new div:not(:last-child) {
+  border-bottom: 1px solid #c5c6ce;
+  padding: 3rem 0;
+}
+
+.hero_grid_new div:last-child {
+  padding: 3rem 0;
+}
+
+.hero_grid_new h2 {
+  color: #e9ab53;
+  font-size: 3rem;
+}
+
+.hero_grid_new h3 {
+  color: #fffdfa;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.hero_grid_new h3:hover {
+  cursor: pointer;
+  color: #e9ab53;
+}
+
+.hero_grid_new p {
+  color: #5d5f79;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 /* css for error page */
@@ -116,5 +194,49 @@ a:visited {
   .navigation_routes {
     display: flex;
     gap: 2rem;
+  }
+
+  /* hero */
+  .hero_grid_box {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero_grid_box .hero_cover_mobile {
+    display: none;
+  }
+
+  .hero_grid_box .hero_cover_desktop {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .hero_grid_cover {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 9;
+  }
+
+  .hero_grid_heading {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .hero_grid_description {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 9;
+  }
+
+  .hero_grid_new {
+    background-color: #00001a;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 9;
+    grid-column-end: 13;
   }
 }

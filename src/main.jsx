@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css';
+import Layout from './pages/Layout.jsx';
 import Home from './pages/Home.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import New from './pages/New.jsx';
@@ -12,9 +13,10 @@ import Categories from './pages/Categories.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
+      { path: '/', element: <Home /> },
       { path: 'new', element: <New /> },
       { path: 'popular', element: <Popular /> },
       { path: 'trending', element: <Trending /> },
