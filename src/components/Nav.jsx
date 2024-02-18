@@ -18,7 +18,11 @@ export default function Nav() {
           onClick={() => setHamburger((hamburder) => !hamburder)}
         >
           {hamburger ? (
-            <img src='/images/icon-menu-close.svg' alt='icon menu close' />
+            <img
+              src='/images/icon-menu-close.svg'
+              alt='icon menu close'
+              width={24}
+            />
           ) : (
             <img src='/images/icon-menu.svg' alt='icon menu' />
           )}
