@@ -28,11 +28,17 @@ p {
 main {
   max-width: 128rem;
   margin: 0 auto;
-  padding: 3rem 6rem;
+  padding: 2rem 4rem;
 }
 
 ul {
   list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 a:link,
@@ -54,15 +60,29 @@ a:visited {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .navigation_routes {
-  display: flex;
-  gap: 2rem;
+  display: none;
 }
 
 .navigation_routes a.active {
   color: #f15e50;
+}
+
+.navigation_routes_mobile {
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 /* css for error page */
@@ -81,4 +101,20 @@ a:visited {
 .error_page_msg {
   font-style: italic;
   text-align: center;
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+  main {
+    padding: 3rem 6rem;
+  }
+
+  .hamburger_menu_button {
+    display: none;
+  }
+
+  .navigation_routes {
+    display: flex;
+    gap: 2rem;
+  }
 }

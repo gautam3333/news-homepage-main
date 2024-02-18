@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 export default function Nav() {
+  const [hamburger, setHamburger] = useState(false);
+
   return (
     <nav className='navigation_box'>
       <div>
@@ -8,7 +11,22 @@ export default function Nav() {
           <img src='/images/logo.svg' alt='logo' className='logo_img' />
         </Link>
       </div>
-      <ul className='navigation_routes'>
+
+      <div>
+        <button
+          className='hamburger_menu_button'
+          onClick={() => setHamburger((hamburder) => !hamburder)}
+        >
+          {hamburger ? (
+            <img src='/images/icon-menu-close.svg' alt='icon menu close' />
+          ) : (
+            <img src='/images/icon-menu.svg' alt='icon menu' />
+          )}
+        </button>
+      </div>
+      <ul
+        className={hamburger ? 'navigation_routes_mobile' : 'navigation_routes'}
+      >
         <li>
           <NavLink to={'/'}>Home</NavLink>
         </li>
