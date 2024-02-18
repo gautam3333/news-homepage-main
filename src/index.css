@@ -11,5 +11,32 @@ html {
 }
 
 body {
+  background-color: #fffdfa;
   font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; */
+}
+
+p {
+  color: #5d5f79;
+}
+
+.error_page h1 {
+  color: #00001a;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.error_page p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.error_page_msg {
+  font-style: italic;
+  text-align: center;
 }
