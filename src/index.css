@@ -129,6 +129,7 @@ a:visited {
 
 .hero_grid_new {
   padding: 2rem;
+  background-color: #00001a;
   transition: all 0.3s ease;
 }
 
